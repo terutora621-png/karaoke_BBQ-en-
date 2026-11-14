@@ -1,0 +1,584 @@
+/* 全体設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background: #111;
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* ヘッダー */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65),
+        transparent
+    );
+}
+
+header h1 {
+    font-size: 38px;
+    color: #d6ad60;
+    letter-spacing: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d6ad60;
+}
+
+/* トップ写真 */
+.hero {
+    min-height: 100vh;
+     min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+      /* BBQの写真 */
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.65)
+        ),
+        url("gp_04_2.jpg");
+
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .hero-content {
+        padding: 100px 20px 40px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .sub-title {
+    color: #d6ad60;
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(42px, 8vw, 85px);
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 3px 15px #000;
+}
+
+.hero-content p:not(.sub-title) {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 14px 45px;
+    border: 1px solid #d6ad60;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d6ad60;
+    color: #111;
+}
+
+/* ABOUT */
+#about {
+    padding: 100px 20px;
+    text-align: center;
+    background: #181818;
+}
+
+#about h2,
+.menus > h2 {
+    color: #d6ad60;
+    font-size: 36px;
+    letter-spacing: 6px;
+    margin-bottom: 35px;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 2.5;
+}
+
+/* MENU */
+.menus {
+    padding: 100px 7%;
+    background: #111;
+    text-align: center;
+}
+
+
+.menu-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-item {
+  padding: 35px;
+   margin-bottom: 35px;
+    border: 1px solid #6e5732;
+    background: #1b1b1b;
+    text-align: left;
+}
+
+.menu-item h3 {
+    color: #d6ad60;
+    font-size: 23px;
+    margin: 25px 0 10px;
+}
+
+.menu-item h4 {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.menu-item p {
+  margin-top: 20px;
+}
+
+.menu-item p h3 {
+    color: #d6ad60;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 85vh;
+        min-height: 85svh;
+        background-position: center;
+    }
+
+    .hero h2 {
+        letter-spacing: 5px;
+    }
+
+    .sub-title {
+      font-size: 14px;
+    }
+
+     .hero-content p:not(.sub-title) {
+        font-size: 14px;
+    }
+
+    #about,
+    .menus {
+        padding: 70px 20px;
+    }
+
+    .menu-item {
+      padding:20px;
+    }
+
+    .menu-item h3 {
+      font-size: 19px;
+    }
+
+    .menu-item h4 {
+      font-size: 14px;
+    }
+} 
+
+/* 文章の間隔を広げる */
+.menu-item h3 {
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+.menu-item h4 {
+    line-height: 2.2;
+    margin-bottom: 25px;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    padding: 14px 45px;
+    border: 1px solid #d6ad60;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d6ad60;
+    color: #111;
+}
+
+
+/* ABOUTの文章 */
+#about p {
+    line-height: 3;
+    margin-top: 25px;
+}
+
+/* ABOUT */
+#about {
+    padding: 100px 20px;
+    text-align: center;
+    background: #181818;
+}
+
+#about h2,
+.menus > h2 {
+    color: #d6ad60;
+    font-size: 36px;
+    letter-spacing: 6px;
+    margin-bottom: 35px;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+/* MENU */
+.menus {
+    padding: 100px 7%;
+    background: #111;
+    text-align: center;
+}
+
+.menu-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    padding: 35px;
+    margin-bottom: 35px;
+    border: 1px solid #6e5732;
+    background: #1b1b1b;
+    text-align: left;
+}
+
+.menu-item h3 {
+    color: #d6ad60;
+    font-size: 23px;
+    margin: 25px 0 10px;
+}
+
+.menu-item h4 {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+.menu-item p {
+    margin-top: 20px;
+}
+
+.menu-item p h3 {
+    color: #d6ad60;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 85vh;
+        min-height: 85svh;
+        background-position: center;
+    }
+
+    .hero h2 {
+        letter-spacing: 5px;
+    }
+
+    .sub-title {
+        font-size: 14px;
+    }
+
+    .hero-content p:not(.sub-title) {
+        font-size: 14px;
+    }
+
+    #about,
+    .menus {
+        padding: 70px 20px;
+    }
+
+    .menu-item {
+        padding: 20px;
+    }
+
+    .menu-item h3 {
+        font-size: 19px;
+    }
+
+    .menu-item h4 {
+        font-size: 14px;
+    }
+}
+
+/* 文章の間隔を広げる */
+.menu-item h3 {
+    margin-top: 35px;
+    margin-bottom: 18px;
+}
+
+.menu-item h4 {
+    line-height: 2.2;
+    margin-bottom: 25px;
+}
+
+.menu-item p {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* ABOUTの文章 */
+#about p {
+    line-height: 3;
+    margin-top: 25px;
+}
+
+
+
+/* メニューの間隔を少しだけ調整 */
+.menu-item h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.menu-item h4 {
+    margin-bottom: 12px;
+    line-height: 2;
+}
+
+.menu-item p {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+/* MENUの間隔を少し調整 */
+.menu-item {
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.menu-item h4 {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* MENU内の文章の間隔 */
+.menu-item h3,
+.menu-item h4 {
+    margin-bottom: 6px;
+}
+
+.menu-item h4 {
+    line-height: 1.7;
+}
+
+.menu-item p {
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+/* 完全予約制から下のメニュー間隔 */
+.menu-item p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.menu-item p h3 {
+    margin-bottom: 8px;
+}
+
+.menu-item h4 {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+/* 完全予約制の項目 */
+.reservation-title {
+    margin-top: 22px;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.menu-item h4 {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* メニュー項目ごとの余白 */
+.menu-detail {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/* 項目内の文章 */
+.menu-detail h3 {
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.menu-detail h4 {
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+/* ドリンク・当店のご案内 */
+.menu-detail + .menu-detail {
+    margin-top: 22px;
+}
+
+/* メニューの縦方向の空白 */
+.menu-item h3 {
+    margin-top: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+.menu-item h4 {
+    margin-top: 8px !important;
+    margin-bottom: 18px !important;
+}
+
+.menu-item p {
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+}
+
+.menu-item h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* MENUの文章間隔 */
+.menu-item h3 {
+    margin: 18px 0 10px !important;
+}
+
+.menu-item h4 {
+    margin: 8px 0 12px !important;
+    line-height: 1.8;
+}
+
+.menu-item p {
+    margin: 10px 0 !important;
+    line-height: 1.8;
+}
+
+/* 当店のご案内 */
+.shop-info {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.shop-info h3 {
+    margin-bottom: 12px;
+}
+
+.shop-info p {
+    text-align: left;
+    margin: 5px 0;
+    line-height: 1.8;
+}
+
+
+
+/* スマホ画面では自動で縦並びにする */
+@media (max-width: 600px) {
+    .info-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
